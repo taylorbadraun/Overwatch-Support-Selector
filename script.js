@@ -109,11 +109,11 @@ function setSupportRating(team) {
         moiraRating = moiraRating + moira.indexOf(team[member])
         zenyattaRating = zenyattaRating + zenyatta.indexOf(team[member])
 
-        let meterMax = team.length * 30 + 1
+        let meterMax = team.length * 30
         let meterMin = team.length
-        let meterLow = team.length * 15
-        let meterHigh = team.length * 20
-        let meterOptimum = team.length * 25 + 1
+        let meterLow = team.length * (team.length + 11)
+        let meterHigh = team.length * (23 - team.length)
+        let meterOptimum = team.length * 25
 
         let meters = document.getElementsByClassName("meter")
         for (let m=0; m < meters.length; m++) {
@@ -161,31 +161,3 @@ function setSupportRating(team) {
     }
 }
 
-
-// function setColorPickerEventListeners(element, colors, pickerElements) {
-//     let pickerLen = pickerElements.length;
-//     for (let i = 0; i < pickerLen; i++) {
-//         pickerElements[i].addEventListener('change', () => {
-//             let red = colors.red.value;
-//             let green = colors.green.value;
-//             let blue = colors.blue.value;
-//             SetElementBGColor(element, red, green, blue);
-//             setDisplayValues(red, green, blue);
-//         });
-//     }
-// }
-//
-// function SetElementBGColor(bgElement, red, green, blue) {
-//     let rgbVal = [red, green, blue].join(',');
-//     bgElement.style.backgroundColor = "rgb(" + rgbVal + ")";
-// }
-//
-// function setDisplayValues(red, green, blue) {
-//     let redVal = document.getElementById("redVal");
-//     let greenVal = document.getElementById("greenVal");
-//     let blueVal = document.getElementById("blueVal");
-//
-//     redVal.innerText = red;
-//     greenVal.innerText = green;
-//     blueVal.innerText = blue;
-// }
