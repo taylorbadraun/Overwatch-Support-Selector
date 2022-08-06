@@ -1,0 +1,12 @@
+.Selectors {
+    display: flex;
+}
+.Tanks {
+    margin: 0 100px;
+}
+.Support {
+    margin: 0 100px;
+}
+span {
+    margin-right: 20px;
+}
